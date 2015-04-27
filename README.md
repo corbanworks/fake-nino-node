@@ -1,4 +1,4 @@
-# fake-ssn-node
+# fake-nino-node
 
 This is a clone of [**fng-nino-tools**](https://github.com/corbanworks/fng-nino-tools) just in node.js
 
