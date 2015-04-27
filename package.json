@@ -1,0 +1,24 @@
+{
+  "name": "fake-nino",
+  "version": "0.0.1",
+  "description": "Validate and generate fake UK national insurance numbers (NINO)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corbanworks/fake-nino-node.git"
+  },
+  "keywords": [
+    "nino",
+    "validate",
+    "NINO",
+    "fake"
+  ],
+  "author": "Jacob Allred <jacob@jacoballred.com>",
+  "license": "GNU General Public License",
+  "bugs": {
+    "url": "https://github.com/corbanworks/fake-nino-node/issues"
+  },
+  "dependencies": {
+  },
+  "homepage": "https://github.com/corbanworks/fake-nino-node"
+}
