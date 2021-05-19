@@ -1,8 +1,12 @@
 // Create a handy array function
-Array.prototype.in_array = function ( obj ) {
-    var len = this.length;
+function in_array( arr, obj ) {
+    if (typeof arr.includes === 'function') {
+        arr.includes(obj);
+    }
+
+    var len = arr.length;
     for ( var x = 0 ; x <= len ; x++ ) {
-        if ( this[x] == obj ) return true;
+        if ( arr[x] == obj ) return true;
     }
     return false;
 }
@@ -86,7 +90,7 @@ exports.generate = function (style) {
     var style = (style == null || (style !== 1 && style !== 2)) ? 1 : style;
 
     // Generate group1
-    while( group1 == '' || notAllowed.in_array(group1) ) {
+    while( group1 == '' || in_array(notAllowed, group1) ) {
         // First letter
         randomArrayIndex = Math.floor(Math.random() * firstAllowed.length);
         group1 = firstAllowed[ randomArrayIndex ];

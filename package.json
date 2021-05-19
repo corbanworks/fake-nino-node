@@ -1,6 +1,6 @@
 {
   "name": "fake-nino",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Validate and generate fake UK national insurance numbers (NINO)",
   "main": "index.js",
   "repository": {
