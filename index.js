@@ -11,14 +11,6 @@ function in_array( arr, obj ) {
     return false;
 }
 
-// Setup our groups
-var group1 = '';
-var group2 = '';
-var group3 = '';
-var group4 = '';
-var group5 = '';
-var randomArrayIndex = '';
-
 // Some combinations are not allowed
 var notAllowed = new Array(
     'GB',
@@ -89,6 +81,14 @@ exports.generate = function (style) {
     // Set a default value for style and make sure it is valid
     var style = (style == null || (style !== 1 && style !== 2)) ? 1 : style;
 
+    // Setup our groups
+    var group1 = '';
+    var group2 = '';
+    var group3 = '';
+    var group4 = '';
+    var group5 = '';
+    var randomArrayIndex = '';
+
     // Generate group1
     while( group1 == '' || in_array(notAllowed, group1) ) {
         // First letter
@@ -126,7 +126,7 @@ exports.generate = function (style) {
 }
 
 exports.validate = function (nino) {
-        var regex = /^[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z] ?[0-9]{2} ?[0-9]{2} ?[0-9]{2} ?[ABCD]?/;
+    var regex = /^[A-CEGHJ-PR-TW-Z][A-CEGHJ-NPR-TW-Z] ?[0-9]{2} ?[0-9]{2} ?[0-9]{2} ?[ABCD]?/;
 
     if (nino.match(regex)) {
         regex = /^(GB)|^(BG)|^(NK)|^(KN)|^(TN)|^(NT)|^(ZZ)/;
